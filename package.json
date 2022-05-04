@@ -22,7 +22,6 @@
     "fix:shopify": "cd shopify && shopify theme check -a"
   },
   "dependencies": {
-    "tailwindcss": "^3.0.2",
     "vue": "^3.2.26",
     "vuex": "^4.0.2"
   },
