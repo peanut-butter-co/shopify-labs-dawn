@@ -89,10 +89,6 @@ module.exports = {
      */
     new MiniCssExtractPlugin({
       filename: "[name]",
-      /*
-      filename: './bundle.css',
-      chunkFilename: '[id].css'
-       */
     }),
     new VueLoaderPlugin(),
     new webpack.DefinePlugin({
