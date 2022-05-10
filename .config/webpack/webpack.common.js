@@ -3,13 +3,21 @@ const webpack = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
+const fs = require('fs');
+const EventHooksPlugin = require('event-hooks-webpack-plugin');
+
+const entries = { 'main': path.resolve(__dirname, '../../src/main.js'),
+                  'main.css': path.resolve(__dirname, '../../src/css/main.css') };
+
+for (let file of fs.readdirSync('./src/scss/bundles/')) {
+  entries[file.replace('.scss', '.css')] = path.resolve(__dirname, '../../src/scss/bundles/' + file);
+}
 
 module.exports = {
   stats: 'minimal',
-  entry: path.resolve(__dirname, '../../src/main.js'),
+  entry: entries,
   output: {
     path: path.resolve(__dirname, '../../shopify/assets/'),
-    filename: 'bundle.js'
   },
   resolve: {
     extensions: ['*', '.js', '.vue', '.json'],
@@ -80,13 +88,34 @@ module.exports = {
      * docs: https://webpack.js.org/plugins/mini-css-extract-plugin
      */
     new MiniCssExtractPlugin({
+      filename: "[name]",
+      /*
       filename: './bundle.css',
       chunkFilename: '[id].css'
+       */
     }),
     new VueLoaderPlugin(),
     new webpack.DefinePlugin({
       __VUE_OPTIONS_API__: 'true',
       __VUE_PROD_DEVTOOLS__: 'false'
+    }),
+    new EventHooksPlugin({
+      done: () => {
+        const files = fs.readdirSync(path.resolve(__dirname, '../../shopify/assets/'));
+        for (const file of files) {
+          if (path.extname(file) !== '.css') {
+            continue;
+          }
+
+          const fileJs = path.resolve(__dirname, '../../shopify/assets/' + file)+ '.js';
+
+          if (!fs.existsSync(fileJs)) {
+            continue;
+          }
+
+          fs.unlinkSync(fileJs);
+        }
+      }
     })
   ]
 }

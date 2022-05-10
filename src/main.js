@@ -3,7 +3,6 @@
  */
 import { createApp } from 'vue'
 import { createStore } from 'vuex'
-import './css/main.css'
 
 /**
  * vuex
