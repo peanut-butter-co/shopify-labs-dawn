@@ -9,8 +9,12 @@ const EventHooksPlugin = require('event-hooks-webpack-plugin');
 const entries = { 'main': path.resolve(__dirname, '../../src/main.js'),
                   'main.css': path.resolve(__dirname, '../../src/css/main.css') };
 
-for (let file of fs.readdirSync('./src/scss/bundles/')) {
-  entries[file.replace('.scss', '.css')] = path.resolve(__dirname, '../../src/scss/bundles/' + file);
+for (let fileCss of fs.readdirSync('./src/scss/bundles/')) {
+  entries[fileCss.replace('.scss', '.css')] = path.resolve(__dirname, '../../src/scss/bundles/' + fileCss);
+}
+
+for (let fileJs of fs.readdirSync('./src/js/bundles/')) {
+  entries[fileJs.replace('.js', '')] = path.resolve(__dirname, '../../src/js/bundles/' + fileJs);
 }
 
 module.exports = {
@@ -103,7 +107,7 @@ module.exports = {
             continue;
           }
 
-          const fileJs = path.resolve(__dirname, '../../shopify/assets/' + file)+ '.js';
+          const fileJs = path.resolve(__dirname, '../../shopify/assets/' + file) + '.js';
 
           if (!fs.existsSync(fileJs)) {
             continue;
