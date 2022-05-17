@@ -19,7 +19,8 @@
     "fix": "run-s -c fix:*",
     "fix:js": "eslint src/**/*.{js,vue} --config .config/.eslintrc.js --fix",
     "fix:css": "stylelint src/**/*.{vue,css,sass,scss} --config .config/.stylelintrc.js --fix",
-    "fix:shopify": "cd shopify && shopify theme check -a"
+    "fix:shopify": "cd shopify && shopify theme check -a",
+    "theme:setup": "cp -R src/templates/*.json shopify/templates && cp src/config/settings_data.json shopify/config"
   },
   "dependencies": {
     "vue": "^3.2.26",
