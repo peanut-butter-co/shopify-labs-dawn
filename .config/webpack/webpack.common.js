@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 const fs = require('fs');
 const EventHooksPlugin = require('event-hooks-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
 const entries = { 'main': path.resolve(__dirname, '../../src/main.js'),
                   'main.css': path.resolve(__dirname, '../../src/css/main.css') };
@@ -98,6 +99,11 @@ module.exports = {
     new webpack.DefinePlugin({
       __VUE_OPTIONS_API__: 'true',
       __VUE_PROD_DEVTOOLS__: 'false'
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: path.resolve(__dirname, '../../src/static/'), to: path.resolve(__dirname, '../../shopify/assets/') },
+      ],
     }),
     new EventHooksPlugin({
       done: () => {
