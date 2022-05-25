@@ -8,8 +8,6 @@
         {{ key }}: {{ value }}
       </li>
     </ul>
-
-    <slot />
   </div>
 </template>
 

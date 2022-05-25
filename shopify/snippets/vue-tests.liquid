@@ -1,0 +1,30 @@
+<div class="test-vue-my-component" vue>
+  <div class="my-component">
+    <render-my-component
+            :shopify-data="{
+              shopName: '{{ shop.name }}',
+              shopDomain: '{{ shop.domain }}',
+              shopEmail: '{{ shop.email }}',
+              shopCurrency: '{{ shop.currency }}'
+            }"
+    >
+      <div class="test-vue-my-component">
+        Contenido interno 1
+      </div>
+    </render-my-component>
+    <renderless-my-component>
+      Pruebecilla
+    </renderless-my-component>
+  </div>
+</div>
+<div class="test-second-component" vue>
+  <div class="my-component-2">
+    <render-my-component-2
+            :shopify-data="{
+              shopName2: '{{ shop.name }}',
+              shopDomain2: '{{ shop.domain }}',
+              shopEmail2: '{{ shop.email }}',
+              shopCurrency2: '{{ shop.currency }}'
+            }"/>
+  </div>
+</div>
