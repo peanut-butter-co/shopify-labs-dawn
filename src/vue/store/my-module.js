@@ -2,7 +2,7 @@
  * state
  */
 const state = {
-  visible: false
+  visible: false,
 }
 
 /**
@@ -24,7 +24,8 @@ const mutations = {
 
   HIDE (state) {
     state.visible = false
-  }
+  },
+
 }
 
 /**
@@ -41,7 +42,7 @@ const actions = {
 
   hide ({ commit }) {
     commit('HIDE')
-  }
+  },
 }
 
 /**

@@ -15,11 +15,35 @@
     <renderless-my-component>
       Pruebecilla
     </renderless-my-component>
+    <render-my-component
+            :shopify-data="{
+              shopName: '{{ shop.name }}',
+              shopDomain: '{{ shop.domain }}',
+              shopEmail: '{{ shop.email }}',
+              shopCurrency: '{{ shop.currency }}'
+            }"
+    >
+      <div class="test-vue-my-component">
+        Contenido interno 2
+      </div>
+    </render-my-component>
   </div>
 </div>
 <div class="test-second-component" vue>
+  <render-my-component
+          :shopify-data="{
+              shopName: '{{ shop.name }}',
+              shopDomain: '{{ shop.domain }}',
+              shopEmail: '{{ shop.email }}',
+              shopCurrency: '{{ shop.currency }}'
+            }"
+  >
+    <div class="test-vue-my-component">
+      Contenido interno 3 - en otro tag vue
+    </div>
+  </render-my-component>
   <div class="my-component-2">
-    <render-my-component-2
+    <render-my-component-translations
             :shopify-data="{
               shopName2: '{{ shop.name }}',
               shopDomain2: '{{ shop.domain }}',

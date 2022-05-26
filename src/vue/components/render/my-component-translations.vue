@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>Pruebas de translations</h1>
     <ul>
       <li
         v-for="(value, key) in shopifyData"
