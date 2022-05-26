@@ -1,24 +1,13 @@
 <template>
   <div>
     <h1>Pruebas de translations</h1>
-    <ul>
-      <li
-        v-for="(value, key) in shopifyData"
-        :key="key"
-      >
-        {{ key }}: {{ value }}
-      </li>
-    </ul>
+    <div>{{ $t('general.password_page.login_form_heading') }}</div>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    shopifyData: {
-      type: Object,
-      required: true
-    }
   }
 }
 </script>

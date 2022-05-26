@@ -23,6 +23,7 @@
     "theme:setup": "cp -R src/templates/*.json shopify/templates && cp src/config/settings_data.json shopify/config"
   },
   "dependencies": {
+    "shopify-theme-lab-i18n": "^2.2.0",
     "vue": "^3.2.26",
     "vuex": "^4.0.2"
   },

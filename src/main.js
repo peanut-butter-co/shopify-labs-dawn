@@ -3,6 +3,7 @@
  */
 import { createApp } from 'vue'
 import { createStore } from 'vuex'
+import { VuePlugin as i18n } from 'shopify-theme-lab-i18n'
 
 /**
  * vuex
@@ -26,6 +27,7 @@ const store = createStore({
  */
 const createVueApp = () => {
   const app = createApp({})
+  app.use(i18n)
 
   /**
    * vue components

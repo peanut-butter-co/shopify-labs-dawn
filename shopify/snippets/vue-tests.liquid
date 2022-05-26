@@ -13,7 +13,7 @@
       </div>
     </render-my-component>
     <renderless-my-component>
-      Pruebecilla
+      <h1>Pruebecilla de renderless - no aporta mucho</h1>
     </renderless-my-component>
     <render-my-component
             :shopify-data="{
@@ -43,12 +43,6 @@
     </div>
   </render-my-component>
   <div class="my-component-2">
-    <render-my-component-translations
-            :shopify-data="{
-              shopName2: '{{ shop.name }}',
-              shopDomain2: '{{ shop.domain }}',
-              shopEmail2: '{{ shop.email }}',
-              shopCurrency2: '{{ shop.currency }}'
-            }"/>
+    <render-my-component-translations/>
   </div>
 </div>

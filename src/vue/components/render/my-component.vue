@@ -12,7 +12,9 @@
 
     <slot />
 
-    <div v-if="store">Actualmente el store.count es {{ store.state['my-module-2'].count }}</div>
+    <div v-if="store">
+      Actualmente el store.count es {{ store.state['my-module-2'].count }}
+    </div>
     <button @click="incCount()">
       Añadir
     </button>
