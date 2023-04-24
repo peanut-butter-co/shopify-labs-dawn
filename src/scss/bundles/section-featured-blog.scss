@@ -1,6 +1,6 @@
 .blog-placeholder {
   margin: 0 1.5rem;
-  background: rgb(var(--color-background));
+  background: RGB(var(--color-background));
 }
 
 @media screen and (min-width: 750px) {
@@ -13,7 +13,7 @@
 
 .blog-placeholder__content {
   padding: 3rem;
-  background: rgba(var(--color-foreground), 0.04);
+  background: RGBA(var(--color-foreground), 0.04);
 }
 
 .blog-placeholder .placeholder {
@@ -26,7 +26,7 @@
 
 .blog-placeholder .rte-width {
   margin-top: 1.2rem;
-  color: rgba(var(--color-foreground), 0.75);
+  color: RGBA(var(--color-foreground), 0.75);
 }
 
 @media screen and (min-width: 990px) {
@@ -60,7 +60,7 @@
 }
 
 .background-secondary .blog-placeholder__content {
-  background-color: rgb(var(--color-background));
+  background-color: RGB(var(--color-background));
 }
 
 .blog__posts .card-wrapper {

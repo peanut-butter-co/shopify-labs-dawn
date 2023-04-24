@@ -72,7 +72,7 @@
 
 .disclosure__button.localization-form__select {
   padding: calc(2rem + var(--inputs-border-width));
-  background: rgb(var(--color-background));
+  background: RGB(var(--color-background));
 }
 
 noscript .localization-form__select {
@@ -98,7 +98,7 @@ noscript .localization-form__select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  color: rgb(var(--color-foreground));
+  color: RGB(var(--color-foreground));
   width: 100%;
   padding-right: 4rem;
   padding-bottom: 1.5rem;
@@ -140,16 +140,16 @@ noscript .localization-selector.link {
 .disclosure__list-wrapper {
   border-width: var(--popup-border-width);
   border-style: solid;
-  border-color: rgba(var(--color-foreground), var(--popup-border-opacity));
+  border-color: RGBA(var(--color-foreground), var(--popup-border-opacity));
   overflow: hidden;
   position: absolute;
   bottom: 100%;
   transform: translateY(-1rem);
   z-index: 2;
-  background-color: rgb(var(--color-background));
+  background-color: RGB(var(--color-background));
   border-radius: var(--popup-corner-radius);
   box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius)
-    rgba(var(--color-shadow), var(--popup-shadow-opacity));
+    RGBA(var(--color-shadow), var(--popup-shadow-opacity));
 }
 
 .disclosure__list {
@@ -175,12 +175,12 @@ noscript .localization-selector.link {
   padding: 0.95rem 3.5rem 0.95rem 2rem;
   text-decoration: none;
   line-height: calc(1 + 0.8 / var(--font-body-scale));
-  color: rgba(var(--color-foreground), 0.75);
+  color: RGBA(var(--color-foreground), 0.75);
   word-break: break-word;
 }
 
 .disclosure__link:hover {
-  color: rgb(var(--color-foreground));
+  color: RGB(var(--color-foreground));
 }
 
 .disclosure__link--active {
@@ -213,9 +213,9 @@ noscript .localization-selector.link {
 }
 
 .header__localization .localization-form__select.link:focus-visible {
-  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+  outline: 0.2rem solid RGBA(var(--color-foreground), 0.5);
   outline-offset: -0.2rem;
-  box-shadow: 0 0 0.2rem 0 rgba(var(--color-foreground), 0.3);
+  box-shadow: 0 0 0.2rem 0 RGBA(var(--color-foreground), 0.3);
 }
 
 /* Header icons (desktop) */
