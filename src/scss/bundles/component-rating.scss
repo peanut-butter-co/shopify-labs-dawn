@@ -16,8 +16,7 @@
 .rating-star {
   --percent: calc(
     (
-        var(--rating) / var(--rating-max) + var(--rating-decimal) *
-          var(--font-size) /
+        var(--rating) / var(--rating-max) + var(--rating-decimal) * var(--font-size) /
           (var(--rating-max) * (var(--letter-spacing) + var(--font-size)))
       ) * 100%
   );
@@ -34,7 +33,7 @@
   background: linear-gradient(
     90deg,
     var(--color-icon) var(--percent),
-    RGBA(var(--color-foreground), 0.15) var(--percent)
+    rgba(var(--color-foreground), 0.15) var(--percent)
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

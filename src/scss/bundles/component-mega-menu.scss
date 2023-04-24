@@ -3,7 +3,7 @@
 }
 
 .mega-menu__content {
-  background-color: RGB(var(--color-background));
+  background-color: rgb(var(--color-background));
   border-left: 0;
   border-radius: 0;
   border-right: 0;
@@ -32,18 +32,17 @@
 .mega-menu[open] .mega-menu__content {
   opacity: 1;
   transform: translateY(0);
-
 }
 
 .mega-menu__list {
   display: grid;
   gap: 2.4rem 4rem;
-  grid-template-columns: repeat(6, minMAX(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   list-style: none;
 }
 
 .mega-menu__link {
-  color: RGBA(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground), 0.75);
   display: block;
   font-size: 1.3rem;
   line-height: calc(1 + 0.3 / var(--font-body-scale));
@@ -76,7 +75,7 @@
 
 .mega-menu__link:hover,
 .mega-menu__link--active {
-  color: RGB(var(--color-foreground));
+  color: rgb(var(--color-foreground));
   text-decoration: underline;
 }
 
