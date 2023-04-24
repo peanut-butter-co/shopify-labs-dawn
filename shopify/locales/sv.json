@@ -36,11 +36,13 @@
       "previous": "Föregående sida"
     },
     "search": {
-      "search": "Sök"
+      "search": "Sök",
+      "reset": "Rensa sökord"
     },
     "cart": {
-      "view": "Visa min varukorg ({{ count }})",
-      "item_added": "Artikeln har lagts till i varukorgen"
+      "view": "Visa varukorg ({{ count }})",
+      "item_added": "Artikeln har lagts till i varukorgen",
+      "view_empty_cart": "Visa varukorg"
     },
     "share": {
       "copy_to_clipboard": "Kopiera länk",
@@ -51,7 +53,8 @@
     "slider": {
       "of": "av",
       "next_slide": "Bild till höger",
-      "previous_slide": "Bild till vänster"
+      "previous_slide": "Bild till vänster",
+      "name": "Bild"
     }
   },
   "newsletter": {
@@ -74,7 +77,8 @@
     "skip_to_product_info": "Gå vidare till produktinformation",
     "total_reviews": "totalt antal recensioner",
     "star_reviews_info": "{{ rating_value }} av {{ rating_max }} stjärnor",
-    "collapsible_content_title": "Innehåll som kan döljas"
+    "collapsible_content_title": "Innehåll som kan döljas",
+    "complementary_products": "Kompletterande produkter"
   },
   "blogs": {
     "article": {
@@ -110,7 +114,11 @@
         "label": "Kvantitet",
         "input_label": "Kvantitet för {{ product }}",
         "increase": "Öka kvantitet för {{ product }}",
-        "decrease": "Minska kvantitet för {{ product }}"
+        "decrease": "Minska kvantitet för {{ product }}",
+        "minimum_of": "Minimum på {{ quantity }}",
+        "maximum_of": "Maximum på {{ quantity }}",
+        "multiples_of": "Ökningar i steg om {{ quantity }}",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> i varukorg"
       },
       "price": {
         "from_price_html": "Från {{ price }}",
@@ -148,7 +156,16 @@
       "include_taxes": "Skatt ingår.",
       "shipping_policy_html": "<a href=\"{{ link }}\">Frakt</a> beräknas i kassan.",
       "choose_options": "Välj alternativ",
-      "choose_product_options": "Välj alternativ för {{ product_name }}"
+      "choose_product_options": "Välj alternativ för {{ product_name }}",
+      "value_unavailable": "{{ option_value }} – inte tillgängligt",
+      "variant_sold_out_or_unavailable": "Varianten är slutsåld eller inte tillgänglig",
+      "inventory_in_stock": "I lager",
+      "inventory_in_stock_show_count": "{{ quantity }} i lager",
+      "inventory_low_stock": "Låg lagernivå",
+      "inventory_low_stock_show_count": "Låg lagernivå: {{ quantity }} kvar",
+      "inventory_out_of_stock": "Slut i lager",
+      "inventory_out_of_stock_continue_selling": "I lager",
+      "sku": "Lagerhållningsenhet"
     },
     "modal": {
       "label": "Mediagalleri"
@@ -198,6 +215,20 @@
       "results_with_count_and_term": {
         "one": "hittat {{ count }} resultat för \"{{ terms }}\"",
         "other": "hittat {{ count }} resultat för \"{{ terms }}\""
+      },
+      "results_pages_with_count": {
+        "one": "{{ count }}-sida",
+        "other": "{{ count }} sidor"
+      },
+      "results_products_with_count": {
+        "one": "{{ count }} produkt",
+        "other": "{{ count }} produkter"
+      },
+      "suggestions": "Förslag",
+      "pages": "Sidor",
+      "results_suggestions_with_count": {
+        "one": "{{ count }} förslag",
+        "other": "{{ count }} förslag"
       }
     },
     "cart": {
@@ -248,7 +279,8 @@
         "product": "Produkt",
         "price": "Pris",
         "total": "Totalt",
-        "quantity": "Kvantitet"
+        "quantity": "Kvantitet",
+        "image": "Produktbild"
       },
       "update": "Uppdatera",
       "login": {
@@ -266,8 +298,7 @@
     },
     "featured_collection": {
       "view_all": "Visa alla",
-      "view_all_label": "Visa alla produkter i produktserien {{ collection_name }}",
-      "slider": "Bild"
+      "view_all_label": "Visa alla produkter i produktserien {{ collection_name }}"
     },
     "collection_list": {
       "view_all": "Visa alla"
@@ -377,7 +408,7 @@
     },
     "reset_password": {
       "title": "Återställ kontolösenord",
-      "subtext": "Ange ett nytt lösenord för {{ email }}",
+      "subtext": "Ange ett nytt lösenord",
       "password": "Lösenord",
       "password_confirm": "Bekräfta lösenordet",
       "submit": "Återställ lösenord"
@@ -405,7 +436,8 @@
       "tracking_company": "Transportör",
       "tracking_number": "Spårningsnummer",
       "subtotal": "Delsumma",
-      "total_duties": "Tullavgifter"
+      "total_duties": "Tullavgifter",
+      "total_refunded": "Återbetald"
     }
   },
   "gift_cards": {
@@ -413,14 +445,27 @@
       "title": "Här är ditt presentkort värt {{ value }} för {{ shop }}!",
       "subtext": "Ditt presentkort",
       "gift_card_code": "Presentkortskod",
-      "shop_link": "Fortsätt shoppa",
-      "remaining_html": "Återstående {{ balance }}",
+      "shop_link": "Besök webbshop",
       "add_to_apple_wallet": "Lägg till i Apple Wallet",
       "qr_image_alt": "QR-kod – skanna för att lösa in presentkort",
-      "copy_code": "Kopiera kod",
+      "copy_code": "Kopiera presentkortskod",
       "expired": "Har gått ut",
       "copy_code_success": "Koden kopierades",
-      "print_gift_card": "Skriv ut"
+      "how_to_use_gift_card": "Använd presentkortskoden online eller QR-koden i butik",
+      "expiration_date": "Går ut {{ expires_on }}"
+    }
+  },
+  "recipient": {
+    "form": {
+      "checkbox": "Jag vill skicka detta som en gåva",
+      "email_label": "Mottagarens e-postadress",
+      "email_label_optional": "Mottagarens e-postadress (valfritt)",
+      "email": "E-postadress",
+      "name_label": "Mottagarens namn (valfritt)",
+      "name": "Namn",
+      "message_label": "Meddelande (valfritt)",
+      "message": "Meddelande",
+      "max_characters": "Max. {{ max_chars }} tecken"
     }
   }
 }

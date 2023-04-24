@@ -36,11 +36,13 @@
       "previous": "Предыдущая страница"
     },
     "search": {
-      "search": "Поиск"
+      "search": "Поиск",
+      "reset": "Удалить поисковый запрос"
     },
     "cart": {
       "view": "Просмотреть корзину ({{ count }})",
-      "item_added": "Товар добавлен в корзину."
+      "item_added": "Товар добавлен в корзину.",
+      "view_empty_cart": "Просмотреть корзину"
     },
     "share": {
       "copy_to_clipboard": "Копировать ссылку",
@@ -51,7 +53,8 @@
     "slider": {
       "of": "из",
       "next_slide": "Листать вперед",
-      "previous_slide": "Листать назад"
+      "previous_slide": "Листать назад",
+      "name": "Ползунок"
     }
   },
   "newsletter": {
@@ -74,7 +77,8 @@
     "skip_to_product_info": "Перейти к информации о продукте",
     "total_reviews": "всего отзывов",
     "star_reviews_info": "{{ rating_value }} из {{ rating_max }} звезд",
-    "collapsible_content_title": "Контент, который можно свернуть"
+    "collapsible_content_title": "Контент, который можно свернуть",
+    "complementary_products": "Дополнительные товары"
   },
   "blogs": {
     "article": {
@@ -119,7 +123,11 @@
         "label": "Количество",
         "input_label": "Количество: {{ product }}",
         "increase": "Увеличить количество {{ product }}",
-        "decrease": "Уменьшить количество {{ product }}"
+        "decrease": "Уменьшить количество {{ product }}",
+        "minimum_of": "Минимум {{ quantity }}",
+        "maximum_of": "Максимум {{ quantity }}",
+        "multiples_of": "Прирост: {{ quantity }}",
+        "in_cart_html": "В корзине: <span class=\"quantity-cart\">{{ quantity }}</span>"
       },
       "price": {
         "from_price_html": "От {{ price }}",
@@ -150,7 +158,16 @@
       "include_taxes": "Сумма налога включена.",
       "shipping_policy_html": "<a href=\"{{ link }}\">Стоимость доставки</a> рассчитывается при оформлении заказа.",
       "choose_options": "Выберите варианты",
-      "choose_product_options": "Выберите варианты для {{ product_name }}"
+      "choose_product_options": "Выберите варианты для {{ product_name }}",
+      "value_unavailable": "{{ option_value }} — Недоступно",
+      "variant_sold_out_or_unavailable": "Вариант распродан или недоступен",
+      "inventory_in_stock": "В наличии",
+      "inventory_in_stock_show_count": "В наличии: {{ quantity }}",
+      "inventory_low_stock": "Заканчивается",
+      "inventory_low_stock_show_count": "Заканчивается. Осталось: {{ quantity }}",
+      "inventory_out_of_stock": "Нет в наличии",
+      "inventory_out_of_stock_continue_selling": "В наличии",
+      "sku": "Артикул"
     },
     "modal": {
       "label": "Галерея мультимедиа"
@@ -210,7 +227,27 @@
         "other": "{{ count }} рез. по запросу «{{ terms }}»",
         "few": "{{ count }} рез. по запросу «{{ terms }}»",
         "many": "{{ count }} рез. по запросу «{{ terms }}»"
-      }
+      },
+      "results_pages_with_count": {
+        "one": "Количество страниц: {{ count }}",
+        "other": "Количество страниц: {{ count }}",
+        "few": "Количество страниц: {{ count }}",
+        "many": "Количество страниц: {{ count }}"
+      },
+      "results_suggestions_with_count": {
+        "one": "Рекомендации: {{ count }}",
+        "other": "Рекомендации: {{ count }}",
+        "few": "Рекомендации: {{ count }}",
+        "many": "Рекомендации: {{ count }}"
+      },
+      "results_products_with_count": {
+        "one": "Продукты: {{ count }}",
+        "other": "Продукты: {{ count }}",
+        "few": "Продукты: {{ count }}",
+        "many": "Продукты: {{ count }}"
+      },
+      "suggestions": "Рекомендации",
+      "pages": "Страницы"
     },
     "cart": {
       "cart": "Корзина"
@@ -263,7 +300,8 @@
         "product": "Товар",
         "price": "Цена",
         "total": "Всего",
-        "quantity": "Количество"
+        "quantity": "Количество",
+        "image": "Изображение продукта"
       },
       "login": {
         "title": "Уже есть учетная запись?",
@@ -280,8 +318,7 @@
     },
     "featured_collection": {
       "view_all": "Посмотреть все",
-      "view_all_label": "Посмотреть все продукты в коллекции \"{{ collection_name }}\"",
-      "slider": "Ползунок"
+      "view_all_label": "Посмотреть все продукты в коллекции \"{{ collection_name }}\""
     },
     "collection_list": {
       "view_all": "Посмотреть все"
@@ -391,7 +428,7 @@
     },
     "reset_password": {
       "title": "Сбросьте пароль учетной записи",
-      "subtext": "Введите новый пароль для {{ email }}",
+      "subtext": "Введите новый пароль",
       "password": "Пароль",
       "password_confirm": "Подтвердить пароль",
       "submit": "Сбросить пароль"
@@ -419,22 +456,36 @@
       "tracking_company": "Перевозчик",
       "tracking_number": "Номер для отслеживания",
       "subtotal": "Промежуточный итог",
-      "total_duties": "Пошлины"
+      "total_duties": "Пошлины",
+      "total_refunded": "Средства возвращены"
     }
   },
   "gift_cards": {
     "issued": {
-      "title": "Вот ваша подарочная карта на {{ value }} для магазина {{ shop }}!",
+      "title": "Вот ваша подарочная карта с номиналом {{ value }} для магазина {{ shop }}!",
       "subtext": "Ваша подарочная карта",
       "gift_card_code": "Код подарочной карты",
-      "shop_link": "Продолжить покупки",
-      "remaining_html": "Остаток на счету: {{ balance }}",
+      "shop_link": "Посетить онлайн-магазин",
       "add_to_apple_wallet": "Добавить в Apple Wallet",
       "qr_image_alt": "Отсканируйте QR-код, чтобы использовать подарочную карту",
-      "copy_code": "Копировать код",
+      "copy_code": "Скопировать код подарочной карты",
       "expired": "Срок действия истек",
       "copy_code_success": "Код скопирован",
-      "print_gift_card": "Печать"
+      "how_to_use_gift_card": "Используйте код подарочной карты онлайн или отсканируйте QR-код в магазине",
+      "expiration_date": "Срок действия истекает {{ expires_on }}"
+    }
+  },
+  "recipient": {
+    "form": {
+      "checkbox": "Я хочу отправить это в качестве подарка",
+      "email_label": "Электронный адрес получателя",
+      "email_label_optional": "Электронный адрес получателя (необязательно)",
+      "email": "Электронный адрес",
+      "name_label": "Имя получателя (необязательно)",
+      "name": "Имя",
+      "message_label": "Сообщение (необязательно)",
+      "message": "Сообщение",
+      "max_characters": "Не больше {{ max_chars }} симв."
     }
   }
 }

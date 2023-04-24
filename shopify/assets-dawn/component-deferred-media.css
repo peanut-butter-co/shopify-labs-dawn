@@ -7,6 +7,7 @@
   height: 100%;
   width: 100%;
   overflow: hidden;
+  border-radius: calc(var(--border-radius) - var(--border-width));
 }
 
 .media > .deferred-media__poster {
@@ -45,6 +46,17 @@
   border-radius: calc(var(--media-radius) - var(--media-border-width));
 }
 
+.global-media-settings--full-width .deferred-media__poster,
+.global-media-settings--full-width .deferred-media__poster:is(:focus, :focus-visible) {
+  border-radius: 0;
+}
+
+/* outline styling for Windows High Contrast Mode */
+@media (forced-colors: active) {
+  .deferred-media__poster:focus {
+    outline: transparent solid 1px;
+  }
+}
 .deferred-media__poster:focus:not(:focus-visible) {
   outline: 0;
   box-shadow: none;

@@ -5,6 +5,9 @@
   "version": "4.4.1",
   "license": "MIT",
   "scripts": {
+    "login:prod": "bash ./shopify-theme-login",
+    "start:env": "bash ./shopify-theme-serve-env",
+    "start:env-dev": "bash ./shopify-theme-serve-env-dev",
     "start": "run-p -sr shopify:serve webpack:watch",
     "deploy": "run-s webpack:build && cd shopify && shopify theme push",
     "deploy:new": "run-s webpack:build && cd shopify && shopify theme push --unpublished",

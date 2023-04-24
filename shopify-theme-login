@@ -1,0 +1,2 @@
+source .env
+shopify theme list --store="$SHOPIFY_FLAG_STORE"

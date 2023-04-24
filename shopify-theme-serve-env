@@ -1,0 +1,3 @@
+source .env
+echo Starting theme $SHOPIFY_THEME_ID
+shopify theme dev --theme "$SHOPIFY_THEME_ID" --ignore config/*_data.json templates/*.json --store="$SHOPIFY_FLAG_STORE" --path "shopify" & cross-env NODE_ENV=development BROWSERSLIST_ENV=development BROWSERSLIST_CONFIG=.config/.browserslistrc webpack --config .config/webpack/webpack.dev.js --watch --progress
