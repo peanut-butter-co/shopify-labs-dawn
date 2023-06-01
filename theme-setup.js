@@ -16,10 +16,12 @@ async function updateTheme() {
     // Move the new Dawn theme to the Shopify folder
     fs.renameSync(`${tmpPath}/dawn-main`, `${__dirname}/shopify`);
 
+    // Copy templates to src folder
     let sourceFolder = `${__dirname}/shopify/templates`; // Replace with the actual source folder path
     let destinationFolder = `${__dirname}/src/templates`; // Replace with the desired destination folder path
     fsExtra.copySync(sourceFolder, destinationFolder);
 
+    // Copy setting_data file to src folder
     const sourceFile = `${__dirname}/shopify/config/settings_data.json`; // Replace with the actual source folder path
     const destinationFile = `${__dirname}/src/config/settings_data.json`; // Replace with the desired destination folder path
     fsExtra.copySync(sourceFile, destinationFile);
@@ -63,7 +65,7 @@ async function updateTheme() {
       fs.renameSync(sourceFilePath, destinationFilePath);
     });
 
-
+    // Convert some css functions names to uppercase to prevent sass from trying to compile them
     let searchValue = 'rgb(';
     let replaceValue = 'RGB(';
     sourceFolder = `${__dirname}/src/scss/bundles`;
