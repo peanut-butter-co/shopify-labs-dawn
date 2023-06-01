@@ -115,7 +115,7 @@ async function downloadRepo() {
 const replaceText = async (filePath, searchValue, replaceValue) => {
   try {
     const fileContents = await fsExtra.readFile(filePath, 'utf-8');
-    const updatedContents = fileContents.replace(searchValue, replaceValue);
+    const updatedContents = fileContents.replaceAll(searchValue, replaceValue);
     await fsExtra.writeFile(filePath, updatedContents, 'utf-8');
   } catch (error) {
     console.error(`Error replacing in file ${filePath}:`, error);
