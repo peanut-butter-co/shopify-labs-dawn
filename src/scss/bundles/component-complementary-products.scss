@@ -91,7 +91,7 @@ product-recommendations.is-accordion + .accordion {
 }
 
 .complementary-slide .card--text .card__content {
-  grid-template-rows: minMAX(0, 1fr) max-content auto;
+  grid-template-rows: MINMAX(0, 1fr) max-content auto;
 }
 
 .complementary-products__container .card--card.card--media > .card__content {

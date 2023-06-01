@@ -1,14 +1,20 @@
 const SCROLL_ANIMATION_TRIGGER_CLASSNAME = 'scroll-trigger';
-const SCROLL_ANIMATION_ACTIVE_CLASSNAME = 'scroll-trigger--active';
+const SCROLL_ANIMATION_OFFSCREEN_CLASSNAME = 'scroll-trigger--offscreen';
+const SCROLL_ANIMATION_CANCEL_CLASSNAME = 'scroll-trigger--cancel';
 
 function onIntersection(elements, observer) {
   elements.forEach((element, index) => {
     if (element.isIntersecting) {
       const elementTarget = element.target;
-      elementTarget.classList.add(SCROLL_ANIMATION_ACTIVE_CLASSNAME);
-      if (elementTarget.hasAttribute('data-cascade'))
-        elementTarget.setAttribute('style', `--animation-order: ${index};`);
+      if (elementTarget.classList.contains(SCROLL_ANIMATION_OFFSCREEN_CLASSNAME)) {
+        elementTarget.classList.remove(SCROLL_ANIMATION_OFFSCREEN_CLASSNAME);
+        if (elementTarget.hasAttribute('data-cascade'))
+          elementTarget.setAttribute('style', `--animation-order: ${index};`);
+      }
       observer.unobserve(elementTarget);
+    } else {
+      element.target.classList.add(SCROLL_ANIMATION_OFFSCREEN_CLASSNAME);
+      element.target.classList.remove(SCROLL_ANIMATION_CANCEL_CLASSNAME);
     }
   });
 }
