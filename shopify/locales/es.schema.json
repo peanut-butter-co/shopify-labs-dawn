@@ -359,10 +359,13 @@
             "label": "Ninguna"
           },
           "options__2": {
-            "label": "3D Lift"
+            "label": "Elevación vertical"
           },
           "label": "Efecto hover",
-          "info": "Afecta a tarjetas y botones."
+          "info": "Afecta a tarjetas y botones.",
+          "options__3": {
+            "label": "3D Lift"
+          }
         }
       }
     }
@@ -434,6 +437,9 @@
           "label": "Comportamiento de la imagen",
           "options__3": {
             "label": "Posición del fondo fija"
+          },
+          "options__4": {
+            "label": "Ampliar al desplazarse"
           }
         }
       }
@@ -467,10 +473,34 @@
       },
       "settings": {
         "auto_rotate": {
-          "label": "Girar las diapositivas automáticamente"
+          "label": "Rotar anuncios automáticamente"
         },
         "change_slides_speed": {
-          "label": "Cambiar de diapositiva cada"
+          "label": "Cambiar cada"
+        },
+        "header__1": {
+          "content": "Íconos de redes sociales",
+          "info": "Para mostrar tus cuentas de redes sociales, vincúlalas en la [configuración del tema](/editor?context=theme&category=social%20media)."
+        },
+        "header__2": {
+          "content": "Anuncios"
+        },
+        "show_social": {
+          "label": "Mostrar íconos en el escritorio"
+        },
+        "header__3": {
+          "content": "Selector de país o región",
+          "info": "Para agregar un país o una región, ve a la [configuración del mercado.](/admin/settings/markets)"
+        },
+        "enable_country_selector": {
+          "label": "Activar selector de país o región"
+        },
+        "header__4": {
+          "content": "Selector de idioma",
+          "info": "Para agregar un idioma, ve a la [configuración de idiomas.](/admin/settings/languages)"
+        },
+        "enable_language_selector": {
+          "label": "Activar selector de idioma"
         }
       },
       "presets": {
@@ -630,8 +660,8 @@
       "name": "Liquid personalizado",
       "settings": {
         "custom_liquid": {
-          "label": "Liquid personalizado",
-          "info": "Agrega fragmentos u otros códigos de Liquid para crear personalizaciones avanzadas."
+          "label": "Código de Liquid",
+          "info": "Agrega fragmentos de la aplicación u otros códigos para crear personalizaciones avanzadas. [Más información](https://shopify.dev/docs/api/liquid)"
         }
       },
       "presets": {
@@ -982,9 +1012,6 @@
         "image_2": {
           "label": "Segunda imagen"
         },
-        "color_scheme": {
-          "info": "Visible cuando se muestre el contenedor."
-        },
         "stack_images_on_mobile": {
           "label": "Apilar imágenes en móviles"
         },
@@ -1255,6 +1282,9 @@
             },
             "button_link": {
               "label": "Enlace de botón"
+            },
+            "outline_button": {
+              "label": "Usar estilo de botón con contorno"
             }
           }
         },
@@ -1811,15 +1841,6 @@
             },
             "page": {
               "label": "Página"
-            }
-          }
-        },
-        "custom_liquid": {
-          "name": "Liquid personalizado",
-          "settings": {
-            "custom_liquid": {
-              "label": "Liquid personalizado",
-              "info": "Agrega fragmentos u otros códigos de Liquid para crear personalizaciones avanzadas."
             }
           }
         },
@@ -2497,14 +2518,6 @@
             }
           }
         },
-        "custom_liquid": {
-          "name": "Liquid personalizado",
-          "settings": {
-            "custom_liquid": {
-              "label": "Liquid personalizado"
-            }
-          }
-        },
         "rating": {
           "name": "Calificación de productos",
           "settings": {
@@ -2580,9 +2593,6 @@
         },
         "image_overlay_opacity": {
           "label": "Opacidad de la sobreposición de imagen"
-        },
-        "color_scheme": {
-          "info": "Visible cuando se muestre el contenedor."
         },
         "show_text_below": {
           "label": "Mostrar el contenido debajo de la imagen en el móvil",
@@ -2660,6 +2670,9 @@
             "label": "Derecha"
           },
           "label": "Alineación del contenido en el móvil"
+        },
+        "color_scheme": {
+          "info": "Visible cuando se muestre el contenedor."
         }
       },
       "blocks": {
@@ -2824,9 +2837,6 @@
             },
             "image_overlay_opacity": {
               "label": "Opacidad de la sobreposición de imagen"
-            },
-            "color_scheme": {
-              "info": "Visible cuando se muestre el contenedor."
             },
             "text_alignment_mobile": {
               "label": "Alineación del contenido en dispositivos móviles",
@@ -3298,6 +3308,20 @@
       },
       "presets": {
         "name": "Varias filas"
+      }
+    },
+    "quick-order-list": {
+      "name": "Lista de pedidos rápidos",
+      "settings": {
+        "show_image": {
+          "label": "Mostrar imágenes"
+        },
+        "show_sku": {
+          "label": "Mostrar SKU"
+        }
+      },
+      "presets": {
+        "name": "Lista de pedidos rápidos"
       }
     }
   }

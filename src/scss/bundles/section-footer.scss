@@ -2,7 +2,7 @@
   border-top: 0.1rem solid RGBA(var(--color-foreground), 0.08);
 }
 
-.footer:not(.color-background-1) {
+.footer:not(.color-scheme-1) {
   border-top: none;
 }
 
@@ -402,9 +402,7 @@
 }
 
 .footer-block__image-wrapper {
-  box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius)
-    RGBA(var(--color-shadow), var(--media-shadow-opacity));
-  margin-bottom: MAX(calc(2rem + var(--media-shadow-vertical-offset) * var(--media-shadow-visible)), 2rem);
+  margin-bottom: 2rem;
   overflow: hidden !important;
 }
 

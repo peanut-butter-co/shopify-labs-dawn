@@ -4,9 +4,6 @@
 {{ 'component-list-menu.css' | asset_url | stylesheet_tag }}
 {{ 'component-list-payment.css' | asset_url | stylesheet_tag }}
 {{ 'component-list-social.css' | asset_url | stylesheet_tag }}
-{%- if section.settings.enable_country_selector or section.settings.enable_language_selector -%}
-  {{ 'component-localization-form.css' | asset_url | stylesheet_tag }}
-{%- endif -%}
 
 {%- style -%}
   .footer {
@@ -47,7 +44,7 @@
   -%}
   {%- if section.blocks.size > 0
     or section.settings.newsletter_enable
-    or section.settings.show_social
+    or section.settings.show_social and has_social_icons == true
     or section.settings.enable_follow_on_shop
   -%}
     {%- unless only_empty_brand -%}
@@ -110,7 +107,7 @@
                           | divided_by: settings.brand_image.aspect_ratio
                         -%}
                         <div
-                          class="footer-block__image-wrapper global-media-settings"
+                          class="footer-block__image-wrapper"
                           style="max-width: min(100%, {{ settings.brand_image_width }}px);"
                         >
                           {{
@@ -131,7 +128,7 @@
                         <div class="rte">{{ settings.brand_description }}</div>
                       {%- endif -%}
                       {%- if block.settings.show_social and has_social_icons -%}
-                        {%- render 'social-icons' -%}
+                        {%- render 'social-icons', class: 'footer__list-social' -%}
                       {%- endif -%}
                     </div>
                   {%- when 'image' -%}
@@ -139,7 +136,7 @@
                       {%- if block.settings.image != blank -%}
                         {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
                         <div
-                          class="footer-block__image-wrapper global-media-settings"
+                          class="footer-block__image-wrapper"
                           style="max-width: min(100%, {{ block.settings.image_width }}px);"
                         >
                           <img
@@ -242,7 +239,7 @@
           {%- endif -%}
 
           {%- if section.settings.show_social and has_social_icons -%}
-            {%- render 'social-icons' -%}
+            {%- render 'social-icons', class: 'footer__list-social' -%}
           {%- endif -%}
         </div>
       </div>
@@ -375,10 +372,6 @@
   </div>
 </footer>
 
-{%- if section.settings.enable_country_selector or section.settings.enable_language_selector -%}
-  <script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
-{%- endif -%}
-
 {% schema %}
 {
   "name": "t:sections.footer.name",
@@ -491,7 +484,7 @@
       "type": "color_scheme",
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
-      "default": "background-1"
+      "default": "scheme-1"
     },
     {
       "type": "header",

@@ -359,10 +359,13 @@
             "label": "Žádný"
           },
           "options__2": {
-            "label": "3D vysunutí"
+            "label": "Svislé vysunutí"
           },
           "label": "Efekt najetí",
-          "info": "Ovlivňuje karty a tlačítka."
+          "info": "Ovlivňuje karty a tlačítka.",
+          "options__3": {
+            "label": "3D vysunutí"
+          }
         }
       }
     }
@@ -434,6 +437,9 @@
           "label": "Chování obrázku",
           "options__3": {
             "label": "Neměnná pozice na pozadí"
+          },
+          "options__4": {
+            "label": "Přiblížit skrolování"
           }
         }
       }
@@ -467,11 +473,38 @@
       },
       "settings": {
         "auto_rotate": {
-          "label": "Automaticky otočit snímky"
+          "label": "Automaticky střídat oznámení"
         },
         "change_slides_speed": {
-          "label": "Změnit snímek co"
+          "label": "Změnit co"
+        },
+        "header__1": {
+          "content": "Ikony sociálních sítí",
+          "info": "Pokud chcete zobrazit své účty na sociálních sítích, přidejte na ně v [nastavení motivu](/editor?context=theme&category=social%20media) příslušné odkazy."
+        },
+        "header__2": {
+          "content": "Oznámení"
+        },
+        "show_social": {
+          "label": "Zobrazit ikony na ploše"
+        },
+        "header__3": {
+          "content": "Selektor země/oblasti",
+          "info": "Pokud chcete přidat zemi nebo oblast, přejděte na [nastavení trhu.](/admin/settings/markets)"
+        },
+        "enable_country_selector": {
+          "label": "Povolit selektor země/oblasti"
+        },
+        "header__4": {
+          "content": "Selektor jazyka",
+          "info": "Pokud chcete přidat jazyk, přejděte na [jazykové nastavení.](/admin/settings/languages)"
+        },
+        "enable_language_selector": {
+          "label": "Povolit selektor jazyka"
         }
+      },
+      "presets": {
+        "name": "Panel oznámení"
       }
     },
     "collage": {
@@ -627,8 +660,8 @@
       "name": "Vlastní kód Liquidu",
       "settings": {
         "custom_liquid": {
-          "label": "Vlastní kód Liquidu",
-          "info": "Přidejte fragmenty aplikací nebo jiný kód Liquidu a vytvořte pokročilá přizpůsobení."
+          "label": "Kód Liquidu",
+          "info": "Přidejte fragmenty aplikací nebo jiný kód a vytvořte pokročilá přizpůsobení. [Zjistit více](https://shopify.dev/docs/api/liquid)"
         }
       },
       "presets": {
@@ -979,9 +1012,6 @@
         "image_2": {
           "label": "Druhý obrázek"
         },
-        "color_scheme": {
-          "info": "Zobrazuje se v případě, že se zobrazuje kontejner."
-        },
         "stack_images_on_mobile": {
           "label": "Zobrazit obrázky na mobilním zařízení nad sebou"
         },
@@ -1252,6 +1282,9 @@
             },
             "button_link": {
               "label": "Tlačítkový odkaz"
+            },
+            "outline_button": {
+              "label": "Použít styl tlačítka s obrysem"
             }
           }
         },
@@ -1604,7 +1637,7 @@
           "name": "Selektor množství"
         },
         "variant_picker": {
-          "name": "Výběr varianty",
+          "name": "Selektor variant",
           "settings": {
             "picker_type": {
               "label": "Typ",
@@ -1808,15 +1841,6 @@
             },
             "page": {
               "label": "Stránka"
-            }
-          }
-        },
-        "custom_liquid": {
-          "name": "Vlastní kód Liquidu",
-          "settings": {
-            "custom_liquid": {
-              "label": "Vlastní kód Liquidu",
-              "info": "Přidejte fragmenty aplikací nebo jiný kód Liquidu a vytvořte pokročilá přizpůsobení."
             }
           }
         },
@@ -2455,7 +2479,7 @@
           "name": "Selektor množství"
         },
         "variant_picker": {
-          "name": "Výběr varianty",
+          "name": "Selektor variant",
           "settings": {
             "picker_type": {
               "label": "Typ",
@@ -2491,14 +2515,6 @@
             },
             "text": {
               "label": "Text"
-            }
-          }
-        },
-        "custom_liquid": {
-          "name": "Vlastní kód Liquidu",
-          "settings": {
-            "custom_liquid": {
-              "label": "Vlastní kód Liquidu"
             }
           }
         },
@@ -2578,9 +2594,6 @@
         "image_overlay_opacity": {
           "label": "Neprůhlednost překryvu obrázku"
         },
-        "color_scheme": {
-          "info": "Zobrazuje se v případě, že se zobrazuje kontejner."
-        },
         "show_text_below": {
           "label": "Na mobilním zařízení zobrazovat obsah pod obrázkem",
           "info": "Nejlepších výsledků dosáhnete použitím obrázku s poměrem stran 16:9. [Zjistit více](https://help.shopify.com/manual/shopify-admin/productivity-tools/image-editor#understanding-image-aspect-ratio)"
@@ -2657,6 +2670,9 @@
         },
         "header": {
           "content": "Mobilní rozvržení"
+        },
+        "color_scheme": {
+          "info": "Zobrazuje se v případě, že se zobrazuje kontejner."
         }
       },
       "blocks": {
@@ -2821,9 +2837,6 @@
             },
             "image_overlay_opacity": {
               "label": "Neprůhlednost překryvu obrázku"
-            },
-            "color_scheme": {
-              "info": "Zobrazuje se v případě, že se zobrazuje kontejner."
             },
             "text_alignment_mobile": {
               "label": "Zarovnání obsahu v mobilním prostředí",
@@ -3295,6 +3308,20 @@
       },
       "presets": {
         "name": "Více řádků"
+      }
+    },
+    "quick-order-list": {
+      "name": "Seznam pro rychlé objednávky",
+      "settings": {
+        "show_image": {
+          "label": "Zobrazit obrázky"
+        },
+        "show_sku": {
+          "label": "Zobrazit SKU"
+        }
+      },
+      "presets": {
+        "name": "Seznam pro rychlé objednávky"
       }
     }
   }

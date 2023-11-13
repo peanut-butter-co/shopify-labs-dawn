@@ -359,10 +359,13 @@
             "label": "Ei mitään"
           },
           "options__2": {
-            "label": "3D-nosto"
+            "label": "Pystysuora nosto"
           },
           "label": "Osoitusefekti",
-          "info": "Vaikuttaa kortteihin ja painikkeisiin."
+          "info": "Vaikuttaa kortteihin ja painikkeisiin.",
+          "options__3": {
+            "label": "3D-nosto"
+          }
         }
       }
     }
@@ -434,6 +437,9 @@
           "label": "Kuvan käyttäytyminen",
           "options__3": {
             "label": "Kiinteä taustasijainti"
+          },
+          "options__4": {
+            "label": "Lähennä vierittäessäsi"
           }
         }
       }
@@ -467,10 +473,34 @@
       },
       "settings": {
         "auto_rotate": {
-          "label": "Käännä diat automaattisesti"
+          "label": "Kierrä ilmoituksia automaattisesti"
         },
         "change_slides_speed": {
-          "label": "Vaihda diat joka"
+          "label": "Vaihda joka"
+        },
+        "header__1": {
+          "content": "Some-kuvakkeet",
+          "info": "Jos haluat näyttää sosiaalisen median tilisi, linkitä ne [teema-asetuksistasi](/editor?context=theme&category=social%20media)."
+        },
+        "header__2": {
+          "content": "Ilmoitukset"
+        },
+        "show_social": {
+          "label": "Näytä työpöydällä olevat kuvakkeet"
+        },
+        "header__3": {
+          "content": "Maa-/aluevalitsin",
+          "info": "Lisää maa/alue siirtymällä [markkina-asetuksiisi.](/admin/settings/markets)"
+        },
+        "enable_country_selector": {
+          "label": "Ota käyttöön maa-/aluevalitsin"
+        },
+        "header__4": {
+          "content": "Kielivalitsin",
+          "info": "Lisää kieli siirtymällä [kieliasetuksiisi.](/admin/settings/languages)"
+        },
+        "enable_language_selector": {
+          "label": "Ota kielivalitsin käyttöön"
         }
       },
       "presets": {
@@ -630,8 +660,8 @@
       "name": "Mukautettu Liquid",
       "settings": {
         "custom_liquid": {
-          "label": "Mukautettu Liquid",
-          "info": "Luo vaativampia mukautuksia lisäämällä sovelluksen koodinpätkiä tai muita Liquid-koodeja."
+          "label": "Liquid-koodi",
+          "info": "Luo vaativampia mukautuksia lisäämällä sovelluksen koodinpätkiä tai muita koodeja. [Lisätietoja](https://shopify.dev/docs/api/liquid)"
         }
       },
       "presets": {
@@ -982,9 +1012,6 @@
         "image_2": {
           "label": "Toinen kuva"
         },
-        "color_scheme": {
-          "info": "Näkyvillä, kun säilö on esillä."
-        },
         "stack_images_on_mobile": {
           "label": "Pinoa kuvat mobiilissa"
         },
@@ -1255,6 +1282,9 @@
             },
             "button_link": {
               "label": "Painikelinkki"
+            },
+            "outline_button": {
+              "label": "Käytä ääriviivallista painiketyyliä"
             }
           }
         },
@@ -1810,15 +1840,6 @@
             },
             "page": {
               "label": "Sivu"
-            }
-          }
-        },
-        "custom_liquid": {
-          "name": "Mukautettu liquid",
-          "settings": {
-            "custom_liquid": {
-              "label": "Mukautettu liquid",
-              "info": "Luo vaativampia mukautuksia lisäämällä sovelluksen koodinpätkiä tai muita Liquid-koodeja."
             }
           }
         },
@@ -2497,14 +2518,6 @@
             }
           }
         },
-        "custom_liquid": {
-          "name": "Mukautettu liquid",
-          "settings": {
-            "custom_liquid": {
-              "label": "Mukautettu liquid"
-            }
-          }
-        },
         "rating": {
           "name": "Tuotearvio",
           "settings": {
@@ -2580,9 +2593,6 @@
         },
         "image_overlay_opacity": {
           "label": "Peittokuvan läpikuultavuus"
-        },
-        "color_scheme": {
-          "info": "Näkyvissä, kun säilö on esillä."
         },
         "show_text_below": {
           "label": "Näytä kuvien alla oleva sisältö mobiililaitteessa",
@@ -2660,6 +2670,9 @@
             "label": "Oikealla"
           },
           "label": "Mobiilisisällön tasaus"
+        },
+        "color_scheme": {
+          "info": "Näkyvissä, kun säilö on esillä."
         }
       },
       "blocks": {
@@ -2824,9 +2837,6 @@
             },
             "image_overlay_opacity": {
               "label": "Peittokuvan läpikuultavuus"
-            },
-            "color_scheme": {
-              "info": "Näkyvillä, kun säilö on esillä."
             },
             "text_alignment_mobile": {
               "label": "Mobiilisisällön tasaus",
@@ -3298,6 +3308,20 @@
       },
       "presets": {
         "name": "Monirivinen"
+      }
+    },
+    "quick-order-list": {
+      "name": "Pikatilausluettelo",
+      "settings": {
+        "show_image": {
+          "label": "Näytä kuvat"
+        },
+        "show_sku": {
+          "label": "Näytä SKU-koodit"
+        }
+      },
+      "presets": {
+        "name": "Pikatilausluettelo"
       }
     }
   }

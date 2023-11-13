@@ -233,6 +233,9 @@
             "label": "None"
           },
           "options__2": {
+            "label": "Vertical lift"
+          },
+          "options__3": {
             "label": "3D lift"
           },
           "label": "Hover effect",
@@ -381,6 +384,9 @@
           "options__3": {
             "label": "Fixed background position"
           },
+          "options__4": {
+            "label": "Zoom in on scroll"
+          },
           "label": "Image behavior"
         }
       },
@@ -442,10 +448,34 @@
       "name": "Announcement bar",
       "settings": {
         "auto_rotate": {
-          "label": "Auto-rotate slides"
+          "label": "Auto-rotate announcements"
         },
         "change_slides_speed": {
-          "label": "Change slides every"
+          "label": "Change every"
+        },
+        "header__1": {
+          "content": "Social media icons",
+          "info": "To display your social media accounts, link them in your [theme settings](/editor?context=theme&category=social%20media)."
+        },
+        "header__2": {
+          "content": "Announcements"
+        },
+        "show_social": {
+          "label": "Show icons on desktop"
+        },
+        "header__3": {
+          "content": "Country/region selector",
+          "info": "To add a country/region, go to your [market settings.](/admin/settings/markets)"
+        },
+        "enable_country_selector": {
+          "label": "Enable country/region selector"
+        },
+        "header__4": {
+          "content": "Language selector",
+          "info": "To add a language, go to your [language settings.](/admin/settings/languages)"
+        },
+        "enable_language_selector": {
+          "label": "Enable language selector"
         }
       },
       "blocks": {
@@ -641,8 +671,8 @@
       "name": "Custom Liquid",
       "settings": {
         "custom_liquid": {
-          "label": "Custom Liquid",
-          "info": "Add app snippets or other Liquid code to create advanced customizations."
+          "label": "Liquid code",
+          "info": "Add app snippets or other code to create advanced customizations. [Learn more](https://shopify.dev/docs/api/liquid)"
         }
       },
       "presets": {
@@ -871,14 +901,6 @@
             },
             "title_info": {
               "content": "A store title and description are included with the preview image. [Learn more](https://help.shopify.com/manual/promoting-marketing/seo/adding-keywords#set-a-title-and-description-for-your-online-store)"
-            }
-          }
-        },
-        "custom_liquid": {
-          "name": "Custom liquid",
-          "settings": {
-            "custom_liquid": {
-              "label": "Custom liquid"
             }
           }
         },
@@ -1195,9 +1217,6 @@
           },
           "label": "Desktop content alignment"
         },
-        "color_scheme": {
-          "info": "Visible when container displayed."
-        },
         "mobile": {
           "content": "Mobile Layout"
         },
@@ -1433,6 +1452,9 @@
             },
             "button_link": {
               "label": "Button link"
+            },
+            "outline_button": {
+              "label": "Use outline button style"
             }
           }
         }
@@ -2008,15 +2030,6 @@
             },
             "title_info": {
               "content": "A store title and description are included with the preview image. [Learn more](https://help.shopify.com/manual/promoting-marketing/seo/adding-keywords#set-a-title-and-description-for-your-online-store)."
-            }
-          }
-        },
-        "custom_liquid": {
-          "name": "Custom liquid",
-          "settings": {
-            "custom_liquid": {
-              "label": "Custom liquid",
-              "info": "Add app snippets or other Liquid code to create advanced customizations."
             }
           }
         },
@@ -2715,6 +2728,20 @@
         "name": "Page"
       }
     },
+    "quick-order-list": {
+      "name": "Quick order list",
+      "settings": {
+        "show_image": {
+          "label": "Show images"
+        },
+        "show_sku": {
+          "label": "Show SKUs"
+        }
+      },
+      "presets": {
+        "name": "Quick order list"
+      }
+    },
     "related-products": {
       "name": "Related products",
       "settings": {
@@ -3052,9 +3079,6 @@
             },
             "image_overlay_opacity": {
               "label": "Image overlay opacity"
-            },
-            "color_scheme": {
-              "info": "Visible when container displayed."
             },
             "text_alignment_mobile": {
               "label": "Mobile content alignment",

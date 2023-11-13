@@ -359,10 +359,13 @@
             "label": "Ingen"
           },
           "options__2": {
-            "label": "3D-løft"
+            "label": "Lodret løft"
           },
           "label": "Svæveeffekt",
-          "info": "Påvirker kort og knapper."
+          "info": "Påvirker kort og knapper.",
+          "options__3": {
+            "label": "3D-løft"
+          }
         }
       }
     }
@@ -434,6 +437,9 @@
           "label": "Billedadfærd",
           "options__3": {
             "label": "Fast baggrundsplacering"
+          },
+          "options__4": {
+            "label": "Zoom ind på rullefelt"
           }
         }
       }
@@ -467,11 +473,38 @@
       },
       "settings": {
         "auto_rotate": {
-          "label": "Roter automatisk slides"
+          "label": "Roter meddelelser automatisk"
         },
         "change_slides_speed": {
-          "label": "Skift slide hver"
+          "label": "Skift hver"
+        },
+        "header__1": {
+          "content": "Ikoner for sociale medier",
+          "info": "Hvis du vil vise dine konti på sociale medier, skal du linke dem i dine [temaindstillinger](/editor?context=theme&category=social%20media)."
+        },
+        "header__2": {
+          "content": "Meddelelser"
+        },
+        "show_social": {
+          "label": "Vis ikoner på skrivebordet"
+        },
+        "header__3": {
+          "content": "Lande-/områdevælger",
+          "info": "Hvis du vil tilføje et land/område, skal du gå til dine [markedsindstillinger.](/admin/settings/markets)"
+        },
+        "enable_country_selector": {
+          "label": "Aktivér lande-/områdevælger"
+        },
+        "header__4": {
+          "content": "Sprogvælger",
+          "info": "Hvis du vil tilføje et sprog, skal du gå til dine [sprogindstillinger.](/admin/settings/languages)"
+        },
+        "enable_language_selector": {
+          "label": "Aktivér sprogvælger"
         }
+      },
+      "presets": {
+        "name": "Meddelelseslinje"
       }
     },
     "collage": {
@@ -627,8 +660,8 @@
       "name": "Tilpasset Liquid",
       "settings": {
         "custom_liquid": {
-          "label": "Tilpasset Liquid",
-          "info": "Tilføj appkodestykker eller anden Liquid-kode for at oprette avancerede tilpasninger."
+          "label": "Liquid-kode",
+          "info": "Tilføj appkodestykker eller anden kode for at oprette avancerede tilpasninger. [Få mere at vide](https://shopify.dev/docs/api/liquid)"
         }
       },
       "presets": {
@@ -867,7 +900,7 @@
         },
         "header__9": {
           "content": "Følg på Shop",
-          "info": "Hvis du vil give kunder mulighed for at følge din butik i Shop-appen via din butiksfacade, skal du have aktiveret Shop Pay. [Få mere at vide](https://help.shopify.com/manual/online-store/themes/customizing-themes/follow-on-shop)"
+          "info": "Hvis du vil give kunder mulighed for at følge din butik i Shop-appen via dit butikslayout, skal du have aktiveret Shop Pay. [Få mere at vide](https://help.shopify.com/manual/online-store/themes/customizing-themes/follow-on-shop)"
         },
         "enable_follow_on_shop": {
           "label": "Aktivér Følg på Shop"
@@ -978,9 +1011,6 @@
         },
         "image_2": {
           "label": "Andet billede"
-        },
-        "color_scheme": {
-          "info": "Synlig, når containeren vises."
         },
         "stack_images_on_mobile": {
           "label": "Stabl billeder på mobilenheder"
@@ -1252,6 +1282,9 @@
             },
             "button_link": {
               "label": "Knaplink"
+            },
+            "outline_button": {
+              "label": "Brug rammeknaptypografi"
             }
           }
         },
@@ -1808,15 +1841,6 @@
             },
             "page": {
               "label": "Side"
-            }
-          }
-        },
-        "custom_liquid": {
-          "name": "Tilpasset Liquid",
-          "settings": {
-            "custom_liquid": {
-              "label": "Tilpasset Liquid",
-              "info": "Tilføj appkodestykker eller anden Liquid-kode for at oprette avancerede tilpasninger."
             }
           }
         },
@@ -2494,14 +2518,6 @@
             }
           }
         },
-        "custom_liquid": {
-          "name": "Tilpasset Liquid",
-          "settings": {
-            "custom_liquid": {
-              "label": "Tilpasset Liquid"
-            }
-          }
-        },
         "rating": {
           "name": "Produktbedømmelser",
           "settings": {
@@ -2577,9 +2593,6 @@
         },
         "image_overlay_opacity": {
           "label": "Billedoverlejringens uigennemsigtighed"
-        },
-        "color_scheme": {
-          "info": "Synlig, når objektbeholderen vises."
         },
         "show_text_below": {
           "label": "Vis indhold under billede på mobiltelefon",
@@ -2657,6 +2670,9 @@
             "label": "Højre"
           },
           "label": "Justering af indhold på mobil"
+        },
+        "color_scheme": {
+          "info": "Synlig, når objektbeholderen vises."
         }
       },
       "blocks": {
@@ -2821,9 +2837,6 @@
             },
             "image_overlay_opacity": {
               "label": "Billedoverlejringens uigennemsigtighed"
-            },
-            "color_scheme": {
-              "info": "Synlig, når containeren vises."
             },
             "text_alignment_mobile": {
               "label": "Justering af indhold på mobil",
@@ -3295,6 +3308,20 @@
       },
       "presets": {
         "name": "Flere rækker"
+      }
+    },
+    "quick-order-list": {
+      "name": "Hurtig ordreliste",
+      "settings": {
+        "show_image": {
+          "label": "Vis billeder"
+        },
+        "show_sku": {
+          "label": "Vis SKU'er"
+        }
+      },
+      "presets": {
+        "name": "Hurtig ordreliste"
       }
     }
   }
